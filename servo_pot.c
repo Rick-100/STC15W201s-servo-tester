@@ -1,5 +1,5 @@
 //servo using pot and comparator to make a servo tester
-//STC15W204S or 201sif program size under 1K
+//STC15W204S or 201s if program size under 1K
 //produce servo pulse on P3.2 using timer 2
 #include "my_stc_.h"	// converted header file
  
