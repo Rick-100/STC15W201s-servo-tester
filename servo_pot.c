@@ -143,13 +143,13 @@ void main()
 	ok_change = 0;	//set at start of timer 20 mS timer phase to allow foreground task to chnage both bytes of servo_pos
 	
 	
-	AUXR &= 0xFB;	//Timer 1 clock is 12T mode
-	TL2 = 0xC8;		//Initial timer value for 19 mS or apprx 50 Hertz
-	TH2 = 0xB5;		//Initial timer value
+	AUXR &= 0xFB;	//Timer 2 clock is 12T mode
+	TL2 = 0xC8;	//Initial timer value for 19 mS or apprx 50 Hertz
+	TH2 = 0xB5;	//Initial timer value
 
-	IE2 |= ET2;		//enable timer 2 interrupt
+	IE2 |= ET2;	//enable timer 2 interrupt
 	AUXR |= T2R;	//start timer 2 running
-	EA = 1;			//global interrupt enable
+	EA = 1;		//global interrupt enable
 		
 	
 	while(1)
